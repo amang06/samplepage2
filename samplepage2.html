@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sample Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.card').delay(1800).queue(function (next) {
+                $(this).removeClass('hover');
+                $('a.hover').removeClass('hover');
+                next();
+            });
+        });
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .h2 {
+            font-family: 'Yu Gothic UI';
+            font-size: larger;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            padding: 1rem 0;
+            background: #f9f9fb;
+        }
+
+        .card {
+            opacity:0.9;
+            margin-top: 20px;
+            margin-right: 20px;
+            width: 350px;
+            display: inline-block;
+            border-radius: 4px;
+            box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .card:hover, .card.hover {
+                -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+                box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+            }
+
+                .card:hover .card-content, .card.hover .card-content {
+                    box-shadow: inset 0 3px 0 0 #ccb65e;
+                    border-color: #ccb65e;
+                }
+
+                .card:hover .card-img .overlay, .card.hover .card-img .overlay {
+                    background-color: rgba(25, 29, 38, 0.85);
+                    -webkit-transition: opacity .2s ease;
+                    transition: opacity .2s ease;
+                    opacity: 1;
+                }
+
+        .card-img {
+            position: relative;
+            height: 224px;
+            width: 100%;
+            background-color: #fff;
+            -webkit-transition: opacity .2s ease;
+            transition: opacity .2s ease;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+            .card-img .overlay {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                opacity: 0;
+            }
+
+                .card-img .overlay .overlay-content {
+                    line-height: 224px;
+                    width: 100%;
+                    text-align: center;
+                    color: #fff;
+                }
+
+                    .card-img .overlay .overlay-content a {
+                        color: #fff;
+                        padding: 0 2rem;
+                        display: inline-block;
+                        border: 1px solid rgba(255, 255, 255, 0.4);
+                        height: 40px;
+                        line-height: 40px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+
+                        .card-img .overlay .overlay-content a:hover, .card-img .overlay .overlay-content a.hover {
+                            background: #ccb65e;
+                            border-color: #ccb65e;
+                        }
+
+        .card-content {
+            width: 100%;
+            min-height: 104px;
+            background-color: #fff;
+            border-top: 1px solid #E9E9EB;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            padding: 1rem 2rem;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+        }
+
+            .card-content a {
+                text-decoration: none;
+                color: #202927;
+                text-align: center;
+            }
+
+                .card-content h2, .card-content a h2 {
+                    font-size: larger;
+                    font-weight: 500;
+                }
+
+                .card-content p, .card-content a p {
+                    font-size: .8rem;
+                    font-weight: 400;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: rgba(32, 41, 28, 0.8);
+                }
+
+        .card-area {
+            margin-left: 190px;
+        }
+
+        .header {
+            background-color: white;
+            height: 100px;
+        }
+
+        .middle {
+            background-image: url(img/bg.png);
+            background-size: cover;
+        }
+
+        @import url( https://fonts.googleapis.com/css?family=Open+Sans:400, 500, 300, 700 );
+
+        * {
+            font-family: Open Sans;
+        }
+
+        .footer-distributed {
+            margin-top: 20px;
+            background-color: rgba(0,0,0,0.6);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 55px 50px;
+        }
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            /* Footer left */
+
+            .footer-distributed .footer-left {
+                width: 40%;
+            }
+
+            /* The company logo */
+
+            .footer-distributed h3 {
+                color: #ffffff;
+                font: normal 36px "Open Sans", cursive;
+                margin: 0;
+            }
+
+                .footer-distributed h3 span {
+                    color: lightseagreen;
+                }
+
+            /* Footer links */
+
+            .footer-distributed .footer-links {
+                color: #ffffff;
+                margin: 20px 0 12px;
+                padding: 0;
+            }
+
+                .footer-distributed .footer-links a {
+                    display: inline-block;
+                    line-height: 1.8;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+            .footer-distributed .footer-company-name {
+                color: #00ffff;
+                font-size: 14px;
+                font-weight: normal;
+                margin: 0;
+            }
+
+            /* Footer Center */
+
+            .footer-distributed .footer-center {
+                width: 35%;
+            }
+
+                .footer-distributed .footer-center i {
+                    background-color: #33383b;
+                    color: #ffffff;
+                    font-size: 25px;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 42px;
+                    margin: 10px 15px;
+                    vertical-align: middle;
+                }
+
+                    .footer-distributed .footer-center i.fa-envelope {
+                        font-size: 17px;
+                        line-height: 38px;
+                    }
+
+                .footer-distributed .footer-center p {
+                    display: inline-block;
+                    color: #ffffff;
+                    font-weight: 400;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+
+                    .footer-distributed .footer-center p span {
+                        display: block;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 2;
+                    }
+
+                    .footer-distributed .footer-center p a {
+                        color: lightseagreen;
+                        text-decoration: none;
+                    }
+
+            .footer-distributed .footer-links a:before {
+                content: "|";
+                font-weight: 300;
+                font-size: 20px;
+                left: 0;
+                color: #fff;
+                display: inline-block;
+                padding-right: 5px;
+            }
+
+            .footer-distributed .footer-links .link-1:before {
+                content: none;
+            }
+
+            /* Footer Right */
+
+            .footer-distributed .footer-right {
+                width: 20%;
+            }
+
+            .footer-distributed .footer-company-about {
+                line-height: 20px;
+                color: #92999f;
+                font-size: 13px;
+                font-weight: normal;
+                margin: 0;
+            }
+
+                .footer-distributed .footer-company-about span {
+                    display: block;
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+
+            .footer-distributed .footer-icons {
+                margin-top: 25px;
+            }
+
+                .footer-distributed .footer-icons a {
+                    display: inline-block;
+                    width: 35px;
+                    height: 35px;
+                    cursor: pointer;
+                    background-color: #33383b;
+                    border-radius: 2px;
+                    font-size: 20px;
+                    color: #ffffff;
+                    text-align: center;
+                    line-height: 35px;
+                    margin-right: 3px;
+                    margin-bottom: 5px;
+                }
+
+
+        .div .container-fluid {
+            opacity: 0.6;
+            background-color: #fff;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="container-fluid" >
+            <div>
+                <a class="navbar-brand" style="margin-left:180px" href="#"> <h3>University Logo</h3></a>
+            </div>
+            <div>
+                <label style="margin-left:650px;margin-top:20px">Helpline: +91-958-200-1237<br /> Email: contact@aman-gupta.in</label>
+            </div>
+        </div>
+    </div>
+    <!--header-->
+    <!--middle-->
+    <div class="middle">
+
+        <div class="card-area">
+
+            <div class="card hover">
+                <div class="card-img" style="background-image:url(img/1.jpg)">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a class="hover" href="#!">Apply Now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <a href="#!">
+                        <h2>Bachelor of Technology</h2>
+                        <p></p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image:url(img/2.jpg);">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a href="#!">Apply Now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <a href="#!">
+                        <h2>Bachelor of Commerce</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image:url(img/3.jpg);">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a href="#!">Apply Now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <a href="#!">
+                        <h2>Master of Business Administration</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image:url(img/4.jpg);">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a href="#!">Apply Now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <a href="#!">
+                        <h2>Bachelor of Law</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image:url(img/5.jpg);">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a href="#!">Apply Now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <a href="#!">
+                        <h2>Master of Technology</h2>
+                        
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image:url(img/6.jpg);">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a href="#!">Apply Now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <a href="#!">
+                        <h2>Fashion Designing</h2>
+                       
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--middle-->
+        <!--footer-->
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <h3>University<span>logo</span></h3>
+
+                <p class="footer-links">
+                    <a href="#" class="link-1">Home</a>
+
+                    <a href="#">Blog</a>
+
+                    <a href="#">Academics</a>
+
+                    <a href="#">Life at University</a>
+
+                    <a href="#">News</a>
+
+                    <a href="#">Faq</a>
+
+                    <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">UNIVERSITY NAME © 2020</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Manipal University Jaipur</span><span>Jaipur-Ajmer Express Highway, Dehmi Kalan</span><span> Near GVK Toll Plaza</span>Jaipur,Rajasthan 303007</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+91-958-200-1237</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:contact@aman-gupta.in">contact@aman-gupta.in</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About the Webpage</span>
+                    This is a sample webpage made by Aman Gupta for a university.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!--footer-->
+
+    </div>
+</body>
+</html>
+
